@@ -1,0 +1,130 @@
+
+
+/*----------------- Primera Fila del Header (logo y titulo - FlexBox)--------- */
+
+header{
+    width: 98%;
+    margin: auto;
+    border-top: solid 2px  rgba(236, 157, 10, 0.811);
+    margin-bottom: 5%;
+}
+
+.contenedor-logo-titulo{
+  
+    height: 190px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    background-color: rgba(48, 42, 42, 0.8); 
+}
+
+.contenedor-logo-titulo h1{
+   
+    font-family: 'Oswald', sans-serif;
+    margin: 2em 0px;
+}
+
+
+.contenedor-logo-titulo h1 span{
+    font-family: 'Barlow Condensed', sans-serif;
+   
+}
+
+
+/* Ocultamos el Check para que no se muestre a lado del icono del menú */
+/* El ícono está en la carpeta local */
+#chk-menu{
+    display: none;
+}
+
+/* Ocultamos el icono de menú, hasta que llege al punto de quiebre */
+.encabezado label{
+   display: none;
+}
+
+
+/* -------------MENU---------------- */
+
+.menu-header{
+   
+    padding-right: 5%;
+    background-color:rgba(0,0,0,0.7);
+    border-bottom: solid 4px #000;
+}
+.menu-header ul{
+    font-family:  'Barlow Condensed', sans-serif;
+    display:flex;
+    justify-content: right;
+    transition: all 0.5s;
+  
+}
+.menu-header ul li{
+    margin:0 3%;
+}
+.menu-header a{
+    color:#fff;
+}
+
+/*------------- MEDiA QUERY------------------- */
+/* punto de quiebre a los 768px */
+@media(max-width: 768px){
+    .encabezado{
+        margin-top: 6em;
+    }
+    .encabezado label{
+        display: block;
+    }
+    .menu-header ul{
+        flex-direction: column;
+        border: solid orange 2px;
+        background-color: rgba(0,0,0,0.6);;
+        width: 50%;
+        margin: 0 -51%;
+      
+    }
+    .menu-header li{
+        padding: 10px 0px;
+        border-top:solid orange 1px;
+    }
+    .contenedor-logo-titulo{
+        flex-direction: column;
+      
+     
+    }
+    
+     
+}
+/*-------------- ANIMACIONES------------------- */
+.encabezado label:hover{
+    cursor:pointer;
+}
+
+
+.encabezado li:hover a {
+    color:orange
+}
+.encabezado li:hover i {
+    color:orange;
+}
+/* ---- MUESRA EL MENU, CUANDO SE HACE CLICK EN EL ICONO QUE ESTÁ VINCULADO AL CHECK -----*/
+#chk-menu:checked~.menu-header ul{
+    margin:0;
+}
+
+/* --- LOGO Y TÍTULO---- */
+
+/* formato imagen logo */
+.contenedor-logo img{
+    border-radius: 100%;
+    border: solid 2px rgba(236, 157, 10, 0.811);
+}
+
+/* título  */
+.contenedor-titulo h1{
+    color:rgba(236, 157, 10, 0.811);
+}
+.menu-header i{
+    color: #fff;
+    margin-right: 3px;
+}

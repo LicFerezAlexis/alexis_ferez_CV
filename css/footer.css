@@ -1,0 +1,55 @@
+footer{
+   
+    border-top: rgb(6, 2, 0) solid 4px;
+    border-bottom: solid 2px  rgba(236, 157, 10, 0.811);
+    margin:  auto;
+    margin-top: 30px;
+    width: 80%;
+    background-color: rgba(48, 42, 42, 0.8); 
+    text-align: center;
+    padding-bottom: 30px;
+}
+.contenedor-menu{
+    margin: 2em auto;
+    display: flex;
+    align-items: center;    
+    justify-content: space-around;
+   
+ 
+    
+    
+}
+.contenedor-menu p{
+    color:orange;
+   font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7em;
+   
+    
+}
+.contenedor-menu img{
+    border-radius: 100%;
+    border:solid 2px orange;
+
+}
+.contenedor-texto h3{
+    
+    font-family: 'Barlow Condensed', sans-serif;
+    color: orange;
+}
+.contenedor-menu img:hover{
+    cursor: pointer;
+    border: orangered 2px solid;
+    
+}
+.contenedor-menu img:hover .contenedor-menu p{
+    visibility: visible;
+
+}
+
+
+@media (max-width :768px) {
+    .contenedor-menu{
+        flex-direction: column;
+    }
+    
+}
